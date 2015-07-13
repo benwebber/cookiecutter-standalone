@@ -1,0 +1,10 @@
+{
+  "repo_name": "tool",
+  "package_name": "{{ cookiecutter.repo_name | replace('-', '_') }}",
+  "package_version": "0.1.0",
+  "package_url": "",
+  "description": "Command-line utility to...",
+  "author_name": "",
+  "author_email": "",
+  "vendor_prefix": "org"
+}
