@@ -15,39 +15,37 @@ Install Cookiecutter_, then run:
 Features
 --------
 
-* Flexible entry points. Covers all the bases with setuptools_ and runpy_::
+Flexible entry points
+~~~~~~~~~~~~~~~~~~~~~
 
-  - Install and run from your setuptools_ install path:
+Cover all the bases with setuptools_ and runpy_:
 
-      .. code-block:: bash
+* Install and run from your setuptools_ install path::
 
-        $ pip install tool
-        $ tool
+    $ pip install tool
+    $ tool
 
-  - Install and run as a module:
+* Install and run as a module::
 
-        .. code-block:: bash
+    $ python -m tool
 
-         $ python -m tool
+* Run from the source directory::
 
-  - Run from the source directory:
+    $ python tool/
 
-        .. code-block:: bash
+* Run from a self-contained zip archive::
 
-         $ python tool/
+    $ ./tool
 
-  - Run from a self-contained zip archive:
+Flexible packaging
+~~~~~~~~~~~~~~~~~~
 
-        .. code-block:: bash
+Supports:
 
-         $ ./tool
-
-* Flexible packaging. Supports:
-
-  - source distribution
-  - wheel
-  - self-contained executable archive
-  - self-contained RPM
+* source distribution
+* wheel
+* self-contained executable archive
+* self-contained RPM
 
 License
 -------
