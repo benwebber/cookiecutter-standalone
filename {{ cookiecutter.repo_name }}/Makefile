@@ -1,17 +1,18 @@
 .PHONY: all \
-		clean \
-		dist \
-		help \
-		install \
-		release \
-		rpm \
-		sdist \
-		standalone \
-		wheel
+	clean \
+	dist \
+	help \
+	install \
+	release \
+	rpm \
+	sdist \
+	standalone \
+	wheel
 
-NAME	:= $(shell python setup.py --name)
+PROJECT := $(shell python setup.py --name)
+PACKAGE := $(subst -,_,$(PROJECT))
 VERSION := $(shell python setup.py --version)
-WHEEL	:= $(subst -,_,$(NAME))-$(VERSION)-py2.py3-none-any.whl
+WHEEL   := $(PACKAGE)-$(VERSION)-py2.py3-none-any.whl
 
 all: clean dist
 
@@ -42,10 +43,10 @@ release: dist
 	twine upload dist/*.whl dist/*.tar.gz
 
 standalone: wheel
-	scripts/make-standalone.sh $(NAME) $(WHEEL)
+	scripts/make-standalone.sh $(PROJECT) $(PACKAGE) $(WHEEL)
 
 rpm: sdist
-	scripts/make-rpm.sh $(NAME)
+	scripts/make-rpm.sh $(PROJECT)
 
 sdist: clean
 	python setup.py sdist
