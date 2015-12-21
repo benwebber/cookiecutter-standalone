@@ -43,7 +43,7 @@ release: dist
 	twine upload dist/*.whl dist/*.tar.gz
 
 standalone: wheel
-	scripts/make-standalone.sh $(PROJECT) $(PACKAGE) $(WHEEL)
+	scripts/make-standalone.sh $(PROJECT) $(VERSION) $(PACKAGE) $(WHEEL)
 
 rpm: sdist
 	scripts/make-rpm.sh $(PROJECT)
