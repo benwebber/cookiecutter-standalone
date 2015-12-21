@@ -14,19 +14,23 @@ PACKAGE := $(subst -,_,$(PROJECT))
 VERSION := $(shell python setup.py --version)
 WHEEL   := $(PACKAGE)-$(VERSION)-py2.py3-none-any.whl
 
+define USAGE
+Targets:
+
+  clean       remove build artifacts
+  dist        build source distribution and wheel
+  install     install package to active Python site packages
+  release     build and upload package to PyPI
+  rpm         build RPM
+  dist        build source distribution
+  standalone  build standalone executable .zip
+  wheel       build wheel
+endef
+
 all: clean dist
 
 help:
-	@echo 'Targets:'
-	@echo
-	@echo '  clean       remove build artifacts'
-	@echo '  dist        build source distribution and wheel'
-	@echo '  install     install package to active Python site packages'
-	@echo '  release     build and upload package to PyPI'
-	@echo '  rpm         build RPM'
-	@echo '  dist        build source distribution'
-	@echo '  standalone  build standalone executable .zip'
-	@echo '  wheel       build wheel'
+	@echo $(info $(USAGE))
 
 clean:
 	$(RM) -r build dist
