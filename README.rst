@@ -1,7 +1,9 @@
-cookiecutter-pypackage-tool
-===========================
+cookiecutter-standalone
+=======================
 
-Cookiecutter_ template designed for command-line tools.
+Cookiecutter_ template designed for self-contained command-line tools.
+
+Requires Cookiecutter_ 1.1 or later.
 
 Usage
 -----
@@ -10,7 +12,7 @@ Install Cookiecutter_, then run:
 
 .. code-block:: bash
 
-    cookiecutter https://github.com/benwebber/cookiecutter-pypackage-tool.git
+    cookiecutter https://github.com/benwebber/cookiecutter-standalone.git
 
 Features
 --------
@@ -45,7 +47,7 @@ Supports:
 * source distribution
 * wheel
 * self-contained executable archive
-* self-contained RPM
+* RPM containing isolated virtual environment
 
 Asset management
 ~~~~~~~~~~~~~~~~
