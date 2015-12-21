@@ -15,7 +15,13 @@ setuptools.setup(
 
     packages=setuptools.find_packages(),
 
+    {% if cookiecutter.assets == 'yes' -%}
+    install_requires=[
+        'setuptools',
+    ],
+    {% else -%}
     install_requires=[],
+    {% endif -%}
 
     include_package_data=True,
     zip_safe=False,

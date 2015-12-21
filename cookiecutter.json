@@ -6,5 +6,7 @@
   "description": "Command-line utility to...",
   "author_name": "",
   "author_email": "",
-  "vendor_prefix": "org"
+  "vendor_prefix": "org",
+  "assets": ["no", "yes"],
+  "asset_package": "assets"
 }

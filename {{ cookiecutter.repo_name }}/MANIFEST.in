@@ -1,1 +1,4 @@
 include README.rst
+{% if cookiecutter.assets == 'yes' -%}
+include {{ cookiecutter.package_name }}/{{ cookiecutter.asset_package }}/*
+{% endif -%}
